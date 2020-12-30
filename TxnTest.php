@@ -9,14 +9,53 @@
 <head>
 <title>Merchant Check Out Page</title>
 <meta name="GENERATOR" content="Evrsoft First Page">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
+
+
+
 </head>
 
 <body>
-	<h1>Merchant Check Out Page</h1>
-	<pre>
-	</pre>
-	</form>
 
+
+
+<style>
+    body {
+    background-color: #eeeeee
+}
+
+.green {
+    color: rgb(15, 207, 143);
+    font-weight: 680
+}
+
+@media(max-width:567px) {
+    .mobile {
+        padding-top: 40px
+    }
+}
+  </style>
 
 
 	
@@ -47,11 +86,32 @@
   </header><!-- End Header -->
 
 <!--main start-->
-  <main id="main">
+  
+
+  <section>
+     <p>&nbsp;</p>
+   </section>
+
+<div class="container rounded bg-white">
+    <div class="row d-flex justify-content-center pb-5">
+        <div class="col-sm-5 col-md-5 ml-1">
+            <div class="py-4 d-flex flex-row">
+                <h5><span class="fa fa-check-square-o"></span><b>Triton </b> | </h5><span class="pl-2">Pay</span>
+            </div>
+            
+            <form action="./pgRedirect.php" method="post">
+            <h4>Investment Type</h4>
+            <select class="form-control">
+              <option>Venture Capital</option>
+              <option>Angel Investment Capital</option>
+              <option>Crowd Fund</option>
+              <option>Donate</option>
+              
+            </select>
 
 
-	<form method="post" action="pgRedirect.php">
-		<table border="1">
+
+			<table border="1" style="display: none;">
 			<tbody>
 				<tr>
 					<th>S.No</th>
@@ -59,12 +119,6 @@
 					<th>Value</th>
 				</tr>
 				<tr>
-					<td>1</td>
-					<td><label>ORDER_ID::*</label></td>
-					<td><input id="ORDER_ID" tabindex="1" maxlength="20" size="20"
-						name="ORDER_ID" autocomplete="off"
-						value="<?php echo  "ORDS" . rand(10000,99999999)?>">
-					</td>
 				</tr>
 				<tr>
 					<td>2</td>
@@ -84,24 +138,43 @@
 					</td>
 				</tr>
 				<tr>
-					<td>5</td>
-					<td><label>txnAmount*</label></td>
-					<td><input title="TXN_AMOUNT" tabindex="10"
-						type="text" name="TXN_AMOUNT"
-						value="1">
-					</td>
-				</tr>
-				<tr>
 					<td></td>
 					<td></td>
-					<td><input value="CheckOut" type="submit"	onclick=""></td>
 				</tr>
 			</tbody>
 		</table>
 
+		
+            <p>&nbsp;</p>
+            <h4>Investment Amount in &#8377;</h4>
+            <input class="form-control" type="text" id="" title="TXN_AMOUNT" tabindex="10" name="TXN_AMOUNT"
+			placeholder="1000">
+			<input style="display: none;" id="ORDER_ID" tabindex="1" maxlength="20" size="20"
+						name="ORDER_ID" autocomplete="off"
+						value="<?php echo  "ORDS" . rand(10000,99999999)?>">
+            <p>&nbsp;</p>
+            <h4>Equity in %</h4>
+            <input class="form-control" type="text" name="EQUITY" placeholder="0.1" >
+            <div class="d-flex pt-2">
+              <p>&nbsp;</p>
+            </div>
+            <div class="pt-2">             
+              <input value="Proceed to Payment" type="submit"	class="btn btn-primary btn-block" onclick="">
+                
+            </div>
+          </form>
+        </div>
+
+    </div>
+</div>
 
 
-  </main><!-- End #main -->
+
+		
+
+
+
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer">

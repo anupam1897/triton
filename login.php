@@ -1,13 +1,21 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<title>Welcome to Finance Portal</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="assests/css/style.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <title>Triton contact US</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -28,14 +36,15 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
- 
-    </head>
+
+</head>
 
 
-    <body>
-        
-        <!-- ======= Header ======= -->
-        <header id="header" class="fixed-top d-flex align-items-center">
+
+<body>
+
+       <!-- ======= Header ======= -->
+       <header id="header" class="fixed-top d-flex align-items-center">
             <div class="container d-flex align-items-center">
 
             <div class="logo mr-auto">
@@ -52,22 +61,35 @@
                 <li><a href="./pricing.html">Pricing</a></li>
                 <li><a href="./contact.html">Contact</a></li>
 
-                <li class="get-started"><a href="#about">Login Or Register</a></li>
                 </ul>
             </nav><!-- .nav-menu -->
 
             </div>
         </header><!-- End Header -->
 
-        <main id="main">
+
+
+<div class="signup-form">
+    <form action="loginProcess.php" method="post" enctype="multipart/form-data">
+		<h2>Login</h2>
+		<p class="hint-text">Enter Login Details</p>
+        <div class="form-group">
+        	<input type="email" class="form-control" name="email" placeholder="Email" required="required">
+        </div>
+		<div class="form-group">
+            <input type="password" class="form-control" name="pass" placeholder="Password" required="required">
+        </div>
+		<div class="form-group">
+            <button type="submit" name="save" class="btn btn-success btn-lg btn-block">Login</button>
+        </div>
+        <div class="text-center">Don't have an account? <a href="register.php">Register Here</a></div>
+    </form>
+</div>
 
 
 
 
-    
-
-
-        </main><!-- End #main -->
+</main><!-- End #main -->
         <!-- ======= Footer ======= -->
         <footer id="footer">
             <div class="container">
@@ -112,6 +134,5 @@
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
-    </body>
-
+</body>
 </html>
